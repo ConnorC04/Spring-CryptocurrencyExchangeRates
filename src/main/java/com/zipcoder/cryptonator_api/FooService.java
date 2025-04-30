@@ -1,9 +1,8 @@
-package com.zipcoder.cryptonator_api.services;
+package com.zipcoder.cryptonator_api;
 
 /**
  * Created by leon on 1/22/18.
  */
-import com.zipcoder.cryptonator_api.repositories.FooRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;

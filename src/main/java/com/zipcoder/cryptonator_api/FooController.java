@@ -1,10 +1,8 @@
-package com.zipcoder.cryptonator_api.controller;
+package com.zipcoder.cryptonator_api;
 
 /**
  * Created by leon on 1/22/18.
  */
-import com.zipcoder.cryptonator_api.domain.Foo;
-import com.zipcoder.cryptonator_api.services.FooService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,5 +16,9 @@ public class FooController {
     @GetMapping("/{ticker}")
     public Foo getCrypto(@PathVariable String ticker) {
         return service.getFoo(ticker);
+    }
+
+    public Foo getFoo(String ticker) {
+        return repository.findById(ticker.toUpperCase()).orElse(null);
     }
 }
