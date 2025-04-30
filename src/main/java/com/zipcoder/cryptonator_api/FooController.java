@@ -17,8 +17,4 @@ public class FooController {
     public Foo getCrypto(@PathVariable String ticker) {
         return service.getFoo(ticker);
     }
-
-    public Foo getFoo(String ticker) {
-        return repository.findById(ticker.toUpperCase()).orElse(null);
-    }
 }

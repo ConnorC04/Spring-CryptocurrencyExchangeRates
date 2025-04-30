@@ -16,5 +16,8 @@ public class FooService {
     @Autowired
     private RestTemplate restTemplate;
 
+    public Foo getFoo(String ticker) {
+        return repository.findOne(ticker.toLowerCase());
+    }
 
 }
